@@ -1,5 +1,5 @@
 # Runge-Kutta
-#### A fourth order Runge-Kutta (RK4) differential equation solver using Python
+### A fourth order Runge-Kutta (RK4) differential equation solver using Python
 
 ###### Only requirement to run this script is NumPy and any version of Python 3.X
 
