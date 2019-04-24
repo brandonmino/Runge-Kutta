@@ -71,7 +71,7 @@ for day in range(len(times)):
 Sep_Y = SepAnswers
 
 print('Almost there.. hold your horses!')
-time.sleep(2)
+time.sleep(3)
 print('Done!')
 time.sleep(1)
 print('I will now display all of the data on a graph and table')
@@ -83,18 +83,19 @@ def Graph_Answers(times, Observed, RK4y, SepY):
     times = np.array(times*3)
     area = np.array(Observed + RK4y + SepY)
     type = np.array(['Observed']*5 + ['Runge_Kutta']*5 + ['Separation']*5)
-    data = {'Times': times, 'Area':area, 'type': type}
+    data = {'Times': times, 'Area':area, 'Type': type}
     df = pd.DataFrame(data=data, index=times)
     pprint(df)
-    ax = sns.stripplot(x='Times', y='Area', hue='type', jitter=0, data=data)
+    ax = sns.stripplot(x='Times', y='Area', hue='Type', jitter=0, data=data)
     ax.set(xlabel ='t (days)', ylabel ='A (area)')
     plt.title('RK4 Estimation')
     plt.show()
 
-print('This is the RK4 approximation for area: ', '\n')
+print('These are the approximations for area in comparison to the observed: ', '\n')
 time.sleep(2)
 print(Graph_Answers(times, observed, RK4_y, Sep_Y))
 
 time.sleep(2)
-print('I hope you enjoy this program! Cheers!')
-time.sleep(2)
+print('\n', '\n')
+print('*****   I hope you enjoy this program! Cheers!   *****')
+print('\n', '\n')

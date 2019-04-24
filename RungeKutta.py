@@ -9,8 +9,8 @@ check = False
 
 if question_one == 'y':
     check = True
-    parameters = ast.literal_eval(input('Excellent! Please enter your values in the following order in a comma seperated list: [x0, y0, x, step_height] '))
-    formula = input('Thanks! Now input your differential equation (must be in terms of "y") ')
+    parameters = ast.literal_eval(input('Excellent! Please enter your values in the following order in a comma seperated list: [x0, y0, x, step_height] ' '\n'))
+    formula = input('Thanks! Now input your differential equation (must be in terms of "y") ' '\n')
     print('All set! Now let me calculate that!')
     time.sleep(3)
     print('...doing the math...')
@@ -33,11 +33,9 @@ if question_one == 'y':
             y += ((step_height / 6) * (k1 + (2 * k2) + (2 * k3) + k4))
         print('Got it! Let me display it...')
         time.sleep(3)
-        print('')
-        print(y)
-        print('')
+        print('\n', y, '\n')
         print('*****   Hope you found this tool helpful! Cheers!   *****')
-        print('')
+        print('\n')
     Generic_Runge_Kutta()
 
 if question_one == 'n':
